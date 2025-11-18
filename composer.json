@@ -2,6 +2,7 @@
     "name": "pascallacroix/framework_poo_2025",
     "autoload": {
         "psr-4": {
+            "Core\\": "core/",
             "App\\Controllers\\": "app/controllers/"
         }
     },
