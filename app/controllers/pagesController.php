@@ -2,14 +2,13 @@
 
 namespace App\Controllers;
 
-use \PDO;
+use \PDO, \App\Models\BooksRepository;
 
 abstract class PagesController
 {
     public static function homeAction(PDO $conn)
     {
-        include_once '../app/models/booksModel.php';
-        $books = \App\Models\BooksModel\findAll($conn, 3);
+        $books = BooksRepository::findAll($conn, 3);
 
         global $content, $title;
         ob_start();
