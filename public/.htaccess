@@ -1,10 +1,25 @@
 RewriteEngine on
 
 # ROUTES
+# BOOKS.INDEX
+# PATTERN: books
+# URL: ?books=index
+RewriteRule ^books$ index.php?books=index [L]
+
 # BOOKS.SHOW
 # PATTERN: books/{id}
 # URL: ?books=show&id=x
 RewriteRule ^books/([1-9][0-9]*)$ index.php?books=show&id=$1 [L]
+
+# AUTHORS.INDEX
+# PATTERN: authors
+# URL: ?authors=index
+RewriteRule ^authors$ index.php?authors=index [L]
+
+# AUTHORS.SHOW
+# PATTERN: authors/{id}
+# URL: ?authors=show&id=x
+RewriteRule ^authors/([1-9][0-9]*)$ index.php?authors=show&id=$1 [L]
 
 # --------------------------------------------------
 RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]

@@ -1,9 +1,9 @@
 <?php Core\Template::startSection('title') ?>
-HomePage
+Latest Books
 <?php Core\Template::endSection() ?>
 
 
 <?php Core\Template::startSection('content') ?>
-<?php include "../app/views/books/_recents.php" ?>
-<?php include "../app/views/authors/_recents.php" ?>
+<h2>Latest books</h2>
+<?php include "../app/views/books/_index.php"; ?>
 <?php Core\Template::endSection() ?>
